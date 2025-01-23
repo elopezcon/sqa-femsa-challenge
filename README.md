@@ -1,4 +1,4 @@
-# **SQA FEMSA Challenge**
+# **SQA MOBILE Challenge**
 ## **Table of Contents**
 - [Introduction](#introduction)
 - [Goals](#goals)
@@ -14,7 +14,7 @@
 - [FAQ](#faq)
 
 ## **Introduction**
-This repository is meant to be used as a checklist for the candidates for FEMSA project in order to gain knowledge and have a standard structure across all the projects.
+This repository is meant to be used as a checklist for the candidates who require knowledge in mobile automation.
 
 ## **Goals**
 - Implement a design pattern and structured folders for frontend automation.
@@ -54,11 +54,6 @@ Tools:
 - [Xcode](https://developer.apple.com/xcode/) (Mobile Only)
 - [Android Studio](https://developer.android.com/studio) (Mobile Only)
 
-Frameworks:
-
-- [Cypress](https://www.cypress.io/)
-- [CodeceptJS](https://codecept.io/basics/#architecture)
-
 
 ## **Getting Started**
 * As a starter point it is recommended to install [Homebrew](https://brew.sh/) to help you with the tool installation process.
@@ -74,48 +69,7 @@ Frameworks:
     open -e ~/.zshrc
     ```
 
-## **Frontend Project**
-1. Initialize a new npm project and install all required dependencies for Cypress, use the [references](#references) section.
-2. Navigate to [Todoist](https://todoist.com/) and create an account, get familiar with the site since we are using it for the whole challenge.
-3. Implement your code using Page Object Model structure for [Cypress](https://www.cypress.io/blog/2019/01/03/stop-using-page-objects-and-start-using-app-actions).
-
-### Fronted Automation Tasks:
-- Successful login.
-  - Define a test case that performs a successful login, using credentials stored preferably in a .env file
-- Unsuccessful login. 
-  - Define multiple negative scenarios for login.
-- Create a new task. 
-  - Create a new task and validate it was created correctly.
-- Create 10 new tasks. 
-  - Create 10 new tasks and validate they were created correctly.
-
-> Note: If you have any doubt or questions remember you to ask your Mentor or ask on the QA community in the [#qa-cypress](https://join.slack.com/share/enQtNjEzMzc3MjM5NTQxMy00MWY3YjEyYjhlOTQwMmM0ODFmNWZlMzdkYzg3ZTRjN2IzM2FmYzE1NjU3MDM0YWJjYTMyYjQ5NDY2Nzc0OGNm) channel in Slack.
-
-## **Backend project**
-1. Initialize a new npm project and install all required dependencies for Cypress, use the [references](#references) section.
-2. Navigate to [Todoist API](https://developer.todoist.com/rest/v2).
-3. Implement your code using the structure for [Cypress](https://learn.cypress.io/advanced-cypress-concepts/integration-and-api-tests).
-
-### Backend Automation Tasks:
-1. Get your authorization token and save it as an environment variable.
-2. Create a new folder inside your collection for projects and another one for tasks. 
-3. Create the following endpoints and its corresponding Tests: status codes, content, json schema,response time, etc.    
-  a) Projects:
-    * Get all projects
-    * Create a new project
-    * Get a project
-    * Update a project
-    * Delete a project
-
-    b) Tasks:  
-   * Get active tasks  
-   * Create a new task  
-   * Get an active task  
-   * Update a task    
-   * Delete a task
-4. Create Negative scenarios for each endpoint.
-
-  > Note: If you have any doubt or questions remember you to ask your Mentor or ask on the QA community in the [#qa-cypress](https://join.slack.com/share/enQtNjEzMzc3MjM5NTQxMy00MWY3YjEyYjhlOTQwMmM0ODFmNWZlMzdkYzg3ZTRjN2IzM2FmYzE1NjU3MDM0YWJjYTMyYjQ5NDY2Nzc0OGNm) channel in Slack.
+> Note: If you have any doubts or questions remember to ask the QA community in the [#qa-mobile-experts](https://join.slack.com/share/enQtODMzOTIwNzE2MjUzMy0wYTMwYjY2NzM4NTA0ODk5YjBjNmQyMmM3NGIxZTMxYzI4ZTc1MDYxZjQzNDM0MzU4YmE3NTAwNTE4NTI3Y2Fj) channel in Slack.
 
 ## Mobile Set Up 
 
@@ -198,9 +152,9 @@ source ~/.zshrc
 
 ## **Mobile project**
 1. Perform a [Mobile Set up](#mobile-set-up) for Android or iOS (Only one is necessary).
-2. Initialize a new npm project and install all required dependencies for [CodeceptJS](https://codecept.io/basics/#architecture).
+2. Initialize a new npm project and install all required dependencies for [WebdriverIO](https://webdriver.io/).
 3. Download the test app .apk for Android and .zip for iOS simulator from [My Demo App](https://github.com/saucelabs/my-demo-app-rn/releases) repository.
-4. Implement your code using the structure for [CodeceptJS](https://codecept.io/pageobjects/#dependency-injection).
+
 
 ### Mobile Automation Tasks:
 - Successful login.
@@ -212,17 +166,10 @@ source ~/.zshrc
 - Cart. 
   - Add 1 item to the shopping cart anv validate it was added.
 
-  > Note: If you have any doubt or questions remember you to ask your Mentor or ask on the QA community in the [#qa-mobile-experts](https://join.slack.com/share/enQtNjEzNjk4Nzg0NTA3NS1iZTFmOWE5NWZhZTgyODAxYmY1OWI1NGI0NjdkNTNkMDliZmM3MmZhNmI3Y2NhMWU5YmM3YzE4OGIzODZiODlh) channel in Slack.
+  > Note: If you have any doubt or questions remember to ask the QA community in the [#qa-mobile-experts](https://join.slack.com/share/enQtNjEzNjk4Nzg0NTA3NS1iZTFmOWE5NWZhZTgyODAxYmY1OWI1NGI0NjdkNTNkMDliZmM3MmZhNmI3Y2NhMWU5YmM3YzE4OGIzODZiODlh) channel in Slack.
 
 
 ## **References**
-
-### Frameworks
-Frontend Web and API Javascript based frameworks:
-* [Cypress](https://www.cypress.io/)
-
-Frontend Mobile Javascript based frameworks:
-* [CodeceptJS](https://codecept.io/basics/#architecture)
 
 ### Selectors 
 If there are no _element ID_, _acesibility ID_ or the  xpath of the element is too long; we recomend to use [Android UiSelector](https://developer.android.com/reference/android/support/test/uiautomator/UiSelector) and [iOS Predicates](http://appium.io/docs/en/writing-running-appium/ios/ios-predicate/). 
